@@ -4,4 +4,7 @@ from django.http import HttpResponse
 
 
 def index(req):
-    return HttpResponse("Hello World!")
+    my_dict = {
+        'insert_me':"Hello, I am coming from first_app/views.py"
+    }
+    return render(req,'first_app/index.html',context=my_dict)
