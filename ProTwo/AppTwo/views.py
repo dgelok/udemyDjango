@@ -7,3 +7,6 @@ from django.http import HttpResponse
 def index(req):
     return HttpResponse('<h1>My Second App</h1>')
 
+def help(req):
+    helpdict = {'help_insert': 'HELP PAGE'}
+    return render(req, 'help/help.html',context=helpdict)
